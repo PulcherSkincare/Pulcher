@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show More/Less Cards with Bootstrap</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .card-container .card.hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row card-container">
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card 1</h5>
+              <p class="card-text">Content of card 1.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card 2</h5>
+              <p class="card-text">Content of card 2.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card 3</h5>
+              <p class="card-text">Content of card 3.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3 hidden">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card 4</h5>
+              <p class="card-text">Content of card 4.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3 hidden">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card 5</h5>
+              <p class="card-text">Content of card 5.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3 hidden">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card 6</h5>
+              <p class="card-text">Content of card 6.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3 hidden">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card 7</h5>
+              <p class="card-text">Content of card 7.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3 hidden">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card 8</h5>
+              <p class="card-text">Content of card 8.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3 hidden">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card 9</h5>
+              <p class="card-text">Content of card 9.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button
+          id="toggleButton"
+          class="btn btn-primary"
+          onclick="toggleCards()"
+        >
+          Selengkapnya
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function toggleCards() {
+        const cards = document.querySelectorAll(
+          ".card-container .col-md-4.hidden"
+        );
+        const button = document.getElementById("toggleButton");
+        if (button.innerText === "Selengkapnya") {
+          cards.forEach((card) => card.classList.remove("hidden"));
+          button.innerText = "Sembunyikan";
+        } else {
+          cards.forEach((card) => card.classList.add("hidden"));
+          button.innerText = "Selengkapnya";
+        }
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
